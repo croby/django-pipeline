@@ -30,7 +30,6 @@ class Compiler(object):
                 if compiler.match_file(input_path):
                     output_path = self.output_path(input_path, compiler.output_extension)
                     infile = finders.find(input_path)
-                    outfile = finders.find(output_path)
                     outfile = self.output_path(infile, compiler.output_extension)
                     outdated = compiler.is_outdated(input_path, output_path)
                     try:
